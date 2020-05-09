@@ -1,0 +1,23 @@
+﻿@model HomeViewModel
+
+<h1 class="home-title">@Model.Title</h1>
+
+<div class="row">
+    @foreach (var antiqueItem in Model.Antiques)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail thumbnail-card">
+                <div class="img-wrapper">
+                    <img src="@antiqueItem.ImageThumbnailUrl" alt="">
+                </div>
+                <div class="caption">
+                    <h3 class="pull-right thumbnial-price">@antiqueItem.Price.ToString("c")</h3>
+                    <h3>
+                        <a asp-controller="Home" asp-action="Details" asp-route-id="@antiqueItem.Id">@antiqueItem.Name</a>
+                    </h3>
+                    <p>@antiqueItem.ShortDescription</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

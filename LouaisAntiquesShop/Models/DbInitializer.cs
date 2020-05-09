@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace LouaisAntiquesShop.Models
+{
+    public static class DbInitializer
+    {
+        public static void Seed(AppDbContext context)
+        {
+            if (!context.Antiques.Any())
+            {
+                context.AddRange
+                (
+                    new AntiqueItem { Name = "Rotary Phone", Price = 11066.42M, ShortDescription = "Very Rare Antique Rotary Dial Phone Ericsson Made in Sweden Copper Brass Bakelite", LongDescription = "Vintage from the 1960s \r\n Materials: \r\n Copper, Brass, Bakelite \r\n Very Very Rare!!! Antique Rotary Dial Phone Ericsson Made in Sweden Copper Brass Bakelite /Collectible Phone/Vintage Telephone/Retro Phone", ImageUrl = "https://i.etsystatic.com/17107025/r/il/5c18fa/1822523618/il_794xN.1822523618_lpt4.jpg", IsItemOfTheWeek = false, ImageThumbnailUrl = "https://i.etsystatic.com/17107025/r/il/e89563/1822523534/il_794xN.1822523534_72vk.jpg" },
+                    new AntiqueItem { Name = "Butchering Kit", Price = 543.61M, ShortDescription = "Vintage from the 1900s. coming out of a northern Vermont barn", LongDescription = "This is an absolutely amazing antique hand forged and professionally made knives, hooks, and chains hog butchering kit. The case is also beautifully done, handmade with its original leather strap, with fantastic original hardware.", ImageUrl = "https://i.etsystatic.com/6813572/r/il/dff3b8/1976026564/il_794xN.1976026564_ifs4.jpg", IsItemOfTheWeek = true, ImageThumbnailUrl = "https://i.etsystatic.com/6813572/r/il/6ac419/1976027440/il_fullxfull.1976027440_oggh.jpg" },
+                    new AntiqueItem { Name = "Antique Doll", Price = 123.22M, ShortDescription = "CONNIE Minie Pullip custom doll by Antique Shop Dolls", LongDescription = "Handmade Connie, Mini Pullip (fake) custom. All clothing included. SHOES NOT INCLUDED", ImageUrl = "https://i.etsystatic.com/6118176/r/il/650bd4/1778308311/il_fullxfull.1778308311_q1d2.jpg", IsItemOfTheWeek = false, ImageThumbnailUrl = "https://i.etsystatic.com/6118176/r/il/25271a/1778307233/il_794xN.1778307233_fk12.jpg" },
+                    new AntiqueItem { Name = "Folding Camera", Price = 627.27M, ShortDescription = "Antique Manhattan Optical Folding Camera. Vintage from the 1920s", LongDescription = "This very handsome antique Manhattan Optical Co. Wizard B 4x5'' folding plate camera is being sold as is. The shutter is not functioning. There are also a few light scuff marks on the wood and on the exterior of the camera. All adjustments are smooth, and they lock down tightly. This camera would be perfect for use in a display.", ImageUrl = "https://i.etsystatic.com/9965301/r/il/48d562/2045930167/il_794xN.2045930167_2fqf.jpg", IsItemOfTheWeek = false, ImageThumbnailUrl = "https://i.etsystatic.com/9965301/r/il/79cd58/2045930217/il_794xN.2045930217_suax.jpg" },
+                    new AntiqueItem { Name = "Trumpet", Price = 340.12M, ShortDescription = "Vintage AMATI Trumpet Instrument & Mouthpiece Brass Trumpet from the 1950s", LongDescription = "Vintage AMATI Trumpet Instrument and Mouthpiece Brass Trumpet with Case and Home decor Music shop decor Music love gift. \r\n This Trumpet is AMATI-KRASLICE trade mark.Made in Socialist Czech Republic. \r\n Schmidt's Mouthpiece \r\n it's a rare collectible trumpet or perfect musical decor for your home, a music studio, a music store.", ImageUrl = "https://i.etsystatic.com/14975704/r/il/d16f9f/1968817928/il_794xN.1968817928_a37d.jpg", IsItemOfTheWeek = false, ImageThumbnailUrl = "https://i.etsystatic.com/14975704/r/il/9c9c7c/2016368567/il_794xN.2016368567_8kag.jpg" },
+                    new AntiqueItem { Name = "Photo Album", Price = 368.97M, ShortDescription = "Rare Vintage Photo Album from the 1850's", LongDescription = "Antique 1850's Miniature Photo Album WITH Photos! \r\n AWESOME & RARE collection of 11 Photos from the 1850's! Photos appear to be family members. There are different types of photos- some are light brown in color, some are black and white. Not all pages have a photo(s). There are 10 pages that are empty. The album appears to be leather and has a brass metal clasp that snap shut to close the album. VERY NICE HISTORICAL ANTIQUE COLLECTORS PIECE!", ImageUrl = "https://i.etsystatic.com/19573278/r/il/487563/1982357449/il_794xN.1982357449_fam5.jpg", IsItemOfTheWeek = false, ImageThumbnailUrl = "https://i.etsystatic.com/19573278/r/il/487563/1982357449/il_794xN.1982357449_fam5.jpg" },
+                    new AntiqueItem { Name = "Radio", Price = 313.65M, ShortDescription = "Vintage Zenith Wave Magnet Trans Oceanic Radio! Model A600 Radio!", LongDescription = "Vintage from the 1950s. industrial style, wave magnet radio, vintage zenith. The radio has signs of wear and tear. It does turn on and makes noise, but the channel knob does not work. I believe the cord is original and needs to be replaced. If it moves when it’s turned on but it has a bad connection and plug.", ImageUrl = "https://i.etsystatic.com/11918441/r/il/c02005/1990446528/il_794xN.1990446528_7ngf.jpg", IsItemOfTheWeek = false, ImageThumbnailUrl = "https://i.etsystatic.com/11918441/r/il/c02005/1990446528/il_794xN.1990446528_7ngf.jpg" },                
+                    new AntiqueItem { Name = "Suitcases", Price = 114.4M, ShortDescription = "Leather Suitcases Vintage Luggage Collection from the 1930s", LongDescription = "A stunning collection of 5 x antique vintage suitcases in beautiful black and reddish brown leather, with an excellent aged patina. This charming set would do well as accent pieces to your interior decor or stacked for a real show stopper in the hallway, living room, bedroom or foyer. Would look super in both a designer style home or high-end retail setting. \r\n They can also be used as photography props for backdrops, themed events or weddings, the choice is yours!", ImageUrl = "https://i.etsystatic.com/11418038/r/il/0fb3b6/1929603522/il_794xN.1929603522_nd0q.jpg", IsItemOfTheWeek = false, ImageThumbnailUrl = "https://i.etsystatic.com/11418038/r/il/d91172/1905567357/il_794xN.1905567357_n6xi.jpg" }
+
+                );
+
+                context.SaveChanges();
+            }
+        }
+    }
+}
